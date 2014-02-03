@@ -52,3 +52,7 @@ $('#fsCycler').fullscreenSlider({
   backgroundColor: "transparent" //This is the background color that will be shown before the first image is shown
 });
 ```
+
+## Feature Requests
+* Max Cycles.  Cycling images on a page can be CPU intensive.  Would be great to have a setting (maxCycles?) that would limit the number of cycles we would process before ending on the first image.
+* More transitions.  Currently the transition is a fade, but it would be trivial to add in other transitions, however this would certainly increase the size of the project so we would need to consider each addition carefully.
