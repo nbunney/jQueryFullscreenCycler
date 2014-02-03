@@ -7,6 +7,9 @@ JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fulls
 * Responsive.  Uses CSS3 to make sure that the images correctly cover the screen no matter what the size or orientation.
 * Careful.  Verifies that images are loaded before fading them in.  We assume that you will be using large images for page backgrounds so we are careful to only cycle to an image if we can be sure that it is loaded fully so that visitors with slower connections will not see a series of partly loaded images the first trip through.
 
+## Notes
+* This cycler does not play nice with scrolling pages.  Maybe something we can change in the future, but for now you need to keep any content that is on the page that may be larger than the initial load screen in scrollable divs.
+
 ## Usage
 1. Add a div to your design.  We suggest adding this just under the body tag of your page.
 ```
