@@ -20,7 +20,7 @@
     }, options );
 
     //Clear out the holder and then set up the CSS and append the first image holder.
-    this.html('').css('position', 'absolute').css('top', '0px').css('left', '0px').css('width', '100%').css('height', '100%').css('z-index', '-1').append('<div id="fsImage1"></div>').css('backgroundColor', settings.backgroundColor);
+    this.html('').css('position', 'fixed').css('top', '0px').css('left', '0px').css('width', '100%').css('height', '100%').css('z-index', '-1').append('<div id="fsImage1"></div>').css('backgroundColor', settings.backgroundColor);
     $('#fsImage1').css('position', 'absolute').css('background-position', 'center top').css('background-repeat', 'no-repeat').css('-webkit-background-size', 'cover').css('-moz-background-size', 'cover').css('-o-background-size', 'cover').css('background-size', 'cover').css('width', '100%').css('height', '100%').css('z-index', '-1');
     //Place the image in the holder
 

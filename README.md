@@ -9,9 +9,6 @@ JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fulls
 * SEO and Memory footprint aware.  The plugin does not load the images until after the DOM is loaded allowing Google and Bing to see a fast page load time.  To keep the memory footprint small we only have two images loaded in the DOM at any time.  The others should be cached in the browser so that they load rapidly when requested again.
 * Options.  We allow a single image to be used which will not fire the cycler code but will just create the CSS for the background image.  Speed of cycle and speed of fade are also options along with the background color to show while the first image is loading.
 
-## Notes
-* This cycler does not play nice with scrolling pages.  Maybe something we can change in the future, but for now you need to keep any content that is on the page that may be larger than the initial load screen in scrollable divs.
-
 ## Usage
 1. Add a div to your design.  We suggest adding this just under the body tag of your page.
 ```
