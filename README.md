@@ -10,29 +10,41 @@ JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fulls
 
 ## Usage
 1. Add a div to your design.  We suggest adding this just under the <body> tag of your page.
-    <div id="fsCycler"></div>
+```
+<div id="fsCycler"></div>
+```
 
 2. Include JQuery.
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+```
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+```
 
 3. Include JQuery Fullscreen Cycler.
-    <script type="text/javascript" src="../src/jquery.fullscreenCycler.js"></script>
+```
+<script type="text/javascript" src="../src/jquery.fullscreenCycler.js"></script>
+```
 
 4. Create an array for the images you want to show.
-    var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.com/1440/900/nature/2","http://lorempixel.com/1440/900/nature/3","http://lorempixel.com/1440/900/nature/4");
+```
+var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.com/1440/900/nature/2","http://lorempixel.com/1440/900/nature/3","http://lorempixel.com/1440/900/nature/4");
+```
 
 5. Call JQuery Fullscreen Cycler for the div you added passing in the image array.
-    <script language="javascript" type="text/javascript">
-      (function($) {
-        $('#fsCycler').fullscreenSlider({images: i});
-      })(jQuery);
-    </script>
+```
+<script language="javascript" type="text/javascript">
+  (function($) {
+    $('#fsCycler').fullscreenSlider({images: i});
+  })(jQuery);
+</script>
+```
 
 ## Options
 JQuery Fullscreen Cycler has three optional parameters that can be passed to the plugin.
-    $('#fsCycler').fullscreenSlider({
-      images: i,
-      speed: 6, //This is the time spent holding on each image
-      transitionSpeed: 2, //This is the time spent fading between images
-      backgroundColor: "transparent" //This is the background color that will be shown before the first image is shown
-    });
+```
+$('#fsCycler').fullscreenSlider({
+  images: i,
+  speed: 6, //This is the time spent holding on each image
+  transitionSpeed: 2, //This is the time spent fading between images
+  backgroundColor: "transparent" //This is the background color that will be shown before the first image is shown
+});
+```
