@@ -33,11 +33,14 @@
   <script type="text/javascript" src="../src/jquery.fullscreenCycler.js"></script>
   <script language="javascript" type="text/javascript">
   (function($) {
+    var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.com/1440/900/nature/2","http://lorempixel.com/1440/900/nature/3","http://lorempixel.com/1440/900/nature/4");
+
     $('#fsCycler').fullscreenSlider({
       speed: 6,
       transitionSpeed: 2,
-      images: new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.com/1440/900/nature/2","http://lorempixel.com/1440/900/nature/3","http://lorempixel.com/1440/900/nature/4")
-    })
+      backgroundColor: "transparent",
+      images: i
+    });
 
   	$(function() {
       var ht = window.innerHeight - 250;
