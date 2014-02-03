@@ -9,7 +9,7 @@ JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fulls
 * Careful.  Verifies that images are loaded before fading them in.  We assume that you will be using large images for page backgrounds here so we are careful to only cycle to an image if we can be sure that it is loaded fully so that visitors with slower connections will not see a series of partly loaded images the first trip through.
 
 ## Usage
-1. Add a div to your design.  We suggest adding this just under the <body> tag of your page.
+1. Add a div to your design.  We suggest adding this just under the body tag of your page.
 ```
 <div id="fsCycler"></div>
 ```
