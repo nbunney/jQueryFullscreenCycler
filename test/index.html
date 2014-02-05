@@ -1,63 +1,34 @@
+52
+53
 <!doctype html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8">
 
-    <title>jQuery Fullscreen Cycler</title>
-    <meta name="description" content="jQuery Fullscreen Cycler">
+    <title>JQuery Fullscreen Cycler</title>
+    <meta name="description" content="JQuery Fullscreen Cycler">
     <meta name="author" content="Nathan Bunney">
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
     <style type="text/css">
-      h1, h2 { 
-      	font-family: 'Hammersmith One';
-       	text-align: center;
-      }
-      a:hover{
-      	color: white !important;
-				text-decoration: none;
-      }
-      h1{
-      	margin-bottom: 15px;
-      }
-      h1 a{
-      	font-size: 45px;
-      }
+      h1, h2 { text-shadow: 4px 4px 2px rgba(150, 150, 150, 1); text-align: center; }
       h1 a, h2 a { color: white; text-decoration: none; }
       h2 { position: absolute; bottom: 5px; right: 5px; }
       p { color: black; }
       img { float: left; margin: 0px 10px 10px; }
-      .row{
-      	margin: 0px;
-      }
-      p.muted{
-      	color: white;
-      	text-align: center;
-
-      }
     </style>
   </head>
 
   <body>
     <div id="fsCycler"></div>
-    <h1><a href="https://github.com/nbunney/jqueryFullscreenCycler">jQuery Fullscreen Cycler</a></h1>
-    <p class="muted"><em>The smart way to do background images!</em></p>
-    <div class="row">
-    	<div class="col-md-5">
-	    	<img class="img-rounded img-responsive" src="http://lorempixel.com/600/470/nature/5" />
-    	</div>
-    	<div class="well col-md-5">
-    		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-    		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-    		<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-    	</div>
-    </div>
+    <h1><a href="https://github.com/nbunney/jqueryFullscreenCycler">JQuery Fullscreen Cycler</a></h1>
+    <img src="http://lorempixel.com/600/400/nature/5" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lectus nulla, varius eu lacus auctor, aliquam facilisis massa. In hac habitasse platea dictumst. Morbi eleifend ultricies elit, nec mattis lectus scelerisque quis. Pellentesque sed mauris nisl. Aenean est lacus, hendrerit eu sapien nec, feugiat vehicula nunc. Cras laoreet feugiat sem, consectetur vulputate neque congue a. Aliquam pretium ante libero, a egestas urna laoreet quis.</p>
+    <p>Sed consequat eu tortor eget placerat. Nullam hendrerit mollis congue. Donec dapibus orci ac dui dictum lacinia. Cras eget gravida urna, sed fringilla est. Praesent vulputate erat id odio iaculis auctor. Suspendisse eu neque eros. Mauris urna eros, vehicula eget aliquam a, viverra a arcu.</p>
     <h2><a href="http://inventaweb.net">Built By Inventaweb.net</a></h2>
   </body>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -73,11 +44,11 @@
       images: i
     });
 
-  	$(function() {
+    $(function() {
       var ht = window.innerHeight - 250;
       $('#whiteBoxLeft').height(ht);
       $('#whiteBoxRight').height(ht);
-  	});
+    });
 
   })(jQuery);
   </script>
