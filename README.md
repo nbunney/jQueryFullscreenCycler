@@ -7,7 +7,7 @@ jQuery Fullscreen Cycler is a super lightweight jQuery plugin for creating fulls
 * Responsive.  Uses CSS3 to make sure that the images correctly cover the screen no matter what the size or orientation.
 * Careful.  Verifies that images are loaded before fading them in.  We assume that you will be using large images for page backgrounds so we are careful to only cycle to an image if we can be sure that it is loaded fully so that visitors with slower connections will not see a series of partly loaded images the first trip through.
 * SEO and Memory footprint aware.  The plugin does not load the images until after the DOM is loaded allowing Google and Bing to see a fast page load time.  To keep the memory footprint small we only have two images loaded in the DOM at any time.  The others should be cached in the browser so that they load rapidly when requested again.
-* Options.  We allow a single image to be used which will not fire the cycler code but will just create the CSS for the background image.  Speed of cycle and speed of fade are also options along with the background color to show while the first image is loading.
+* Options.  We allow a single image to be used which will not fire the cycler code but will just create the CSS for the background image.  Speed of cycle and speed of fade are also options along with the background color to show while the first image is loading as well as the max number of times to cycle.
 
 ## Usage
 1. Add a div to your design.  We suggest adding this just under the body tag of your page.
