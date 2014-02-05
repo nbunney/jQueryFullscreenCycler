@@ -1,9 +1,9 @@
 # jqueryFullscreenCycler
 
-JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fullscreen image cyclers.  The plugin is chainable with other jquery commands and is careful to make sure that images are loaded before they are shown.
+jQuery Fullscreen Cycler is a super lightweight jQuery plugin for creating fullscreen image cyclers.  The plugin is chainable with other jQuery commands and is careful to make sure that images are loaded before they are shown.
 
 ## Features
-* Lightweight. Only 4k minified.
+* Lightweight. Only 4K minified.
 * Responsive.  Uses CSS3 to make sure that the images correctly cover the screen no matter what the size or orientation.
 * Careful.  Verifies that images are loaded before fading them in.  We assume that you will be using large images for page backgrounds so we are careful to only cycle to an image if we can be sure that it is loaded fully so that visitors with slower connections will not see a series of partly loaded images the first trip through.
 * SEO and Memory footprint aware.  The plugin does not load the images until after the DOM is loaded allowing Google and Bing to see a fast page load time.  To keep the memory footprint small we only have two images loaded in the DOM at any time.  The others should be cached in the browser so that they load rapidly when requested again.
@@ -15,12 +15,12 @@ JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fulls
 <div id="fsCycler"></div>
 ```
 
-2. Include JQuery.
+2. Include jQuery.
 ```
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 ```
 
-3. Include JQuery Fullscreen Cycler.
+3. Include jQuery Fullscreen Cycler.
 ```
 <script type="text/javascript" src="../src/jquery.fullscreenCycler.js"></script>
 ```
@@ -30,7 +30,7 @@ JQuery Fullscreen Cycler is a super lightweight jquery plugin for creating fulls
 var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.com/1440/900/nature/2","http://lorempixel.com/1440/900/nature/3","http://lorempixel.com/1440/900/nature/4");
 ```
 
-5. Call JQuery Fullscreen Cycler for the div you added passing in the image array.
+5. Call jQuery Fullscreen Cycler for the div you added passing in the image array.
 ```
 <script language="javascript" type="text/javascript">
   (function($) {
@@ -40,16 +40,21 @@ var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.c
 ```
 
 ## Options
-JQuery Fullscreen Cycler has three optional parameters that can be passed to the plugin.
+jQuery Fullscreen Cycler has three optional parameters that can be passed to the plugin.
 ```
 $('#fsCycler').fullscreenSlider({
   images: i,
-  speed: 6.5, //This is the time spent holding on each image in seconds (default is 6 but you can use decimals to get more exact times on the cycles)
-  transitionSpeed: 2, //This is the time spent fading between images in seconds
-  backgroundColor: "transparent" //This is the background color that will be shown before the first image is shown
+  speed: 6.5, 
+  maxCycles: 4,
+  transitionSpeed: 2, 
+  backgroundColor: "transparent"
 });
 ```
 
+*`speed:`* The time (in seconds) spent displaying each image (default is 6, but you can use decimals to get more exact times on the cycles)  
+*`maxCycles:`* Max number of cycles before going back to the first image (default: 4)  
+*`transistionSpeed:`* The time (in seconds) spent fading between images (default: 2)  
+*`backgroundColor:`* The background color that will be shown before the first image is shown  
+
 ## Feature Requests
-* Max Cycles.  Cycling images on a page can be CPU intensive.  Would be great to have a setting (maxCycles?) that would limit the number of cycles we would process before ending on the first image.
 * More transitions.  Currently the transition is a fade, but it would be trivial to add in other transitions, however this would certainly increase the size of the project so we would need to consider each addition carefully.
