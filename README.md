@@ -51,10 +51,10 @@ $('#fsCycler').fullscreenSlider({
 });
 ```
 
-*`speed:`* The time (in seconds) spent displaying each image (default is 6, but you can use decimals to get more exact times on the cycles)
-*`maxCycles:`* Max number of cycles before going back to the first image (default: 4)
-*`transistionSpeed:`* The time (in seconds) spent fading between images (default: 2)
-*`backgroundColor:`* The background color that will be shown before the first image is shown
+*`speed:`* The time (in seconds) spent displaying each image (default is 6, but you can use decimals to get more exact times on the cycles)  
+*`maxCycles:`* Max number of cycles before going back to the first image (default: 4)  
+*`transistionSpeed:`* The time (in seconds) spent fading between images (default: 2)  
+*`backgroundColor:`* The background color that will be shown before the first image is shown  
 
 ## Feature Requests
 * More transitions.  Currently the transition is a fade, but it would be trivial to add in other transitions, however this would certainly increase the size of the project so we would need to consider each addition carefully.
