@@ -52,7 +52,7 @@ $('#fsCycler').fullscreenSlider({
 ```
 
 *`speed:`* The time (in seconds) spent displaying each image (default is 6, but you can use decimals to get more exact times on the cycles)  
-*`maxCycles:`* Max number of cycles before going back to the first image (default: 4)  
+*`maxCycles:`* (optional) Max number of cycles before going back to the first image (default is none)  
 *`transistionSpeed:`* The time (in seconds) spent fading between images (default: 2)  
 *`backgroundColor:`* The background color that will be shown before the first image is shown  
 
