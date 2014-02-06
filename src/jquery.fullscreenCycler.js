@@ -16,7 +16,7 @@
     settings = $.extend({
       speed: 6,
       transitionSpeed: 2,
-      maxCycles: 4,
+      maxCycles: 0,
       backgroundColor: "transparent",
       images: new Array()
     }, options );
@@ -46,7 +46,9 @@
   };
 
 	function changePic(){ //This is called repeatedly to change the image
-    if (curIteration != settings.maxCycles) { // If the current iteration is not greater than the maxCycles
+    // Only change the picture if the current iteration isn't equal to the max number of cycles
+    // Or, if maxCycles == 0 (user hasn't set a value), continue
+    if (curIteration != settings.maxCycles || settings.maxCycles == 0) {
       if (curSlide == '0') { curIteration++; }; // Increment the iteration counter
       //wait until we can validate that the current slide is fully loaded before showing it.
       $('<img/>').attr('src', settings.images[curSlide]).load(function() {
