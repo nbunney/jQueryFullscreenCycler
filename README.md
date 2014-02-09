@@ -1,4 +1,4 @@
-# jqueryFullscreenCycler
+# jQueryFullscreenCycler
 
 jQuery Fullscreen Cycler is a super lightweight jQuery plugin for creating fullscreen image cyclers.  The plugin is chainable with other jQuery commands and is careful to make sure that images are loaded before they are shown.
 
