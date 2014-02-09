@@ -18,6 +18,7 @@
       transitionSpeed: 2,
       maxCycles: 0,
       backgroundColor: "transparent",
+      transition: "fade",
       images: new Array()
     }, options );
 
@@ -45,29 +46,80 @@
     return this;
   };
 
-	function changePic(){ //This is called repeatedly to change the image
+  //This is called repeatedly to change the image
+	function changePic(){
     // Only change the picture if the current iteration isn't equal to the max number of cycles
     // Or, if maxCycles == 0 (user hasn't set a value), continue
     if (curIteration != settings.maxCycles || settings.maxCycles == 0) {
       if (curSlide == '0') { curIteration++; }; // Increment the iteration counter
-      //wait until we can validate that the current slide is fully loaded before showing it.
+
+      //Wait until we can validate that the current slide is fully loaded before showing it.
       $('<img/>').attr('src', settings.images[curSlide]).load(function() {
-        $(this).remove(); // prevent memory leaks
-        //Fade the front image out.
-        $('#fsImage'+curHolder).fadeOut((settings.transitionSpeed*1000), function(){  //Would like to add other options here for the transition.  Sliding to a direction would be easy...
-          curSlide++;
-          if (curHolder==1) newHolder=2; else newHolder=1;
-          //Move the other image to the front.
-          $('#fsImage'+newHolder).css('z-index', '-1');
-          //Move the faded out image behind the other image and start loading the new image in there.
-          if (curSlide >= settings.images.length) curSlide=0;
-          $('#fsImage'+curHolder).css('z-index', '-2').css('background-image', 'url('+settings.images[curSlide]+')').css('opacity', '1').css('display', 'block');
-          curHolder = newHolder;
-          setTimeout(changePic, (settings.speed * 1000));
-        });
+          $(this).remove(); // prevent memory leaks
+
+          var div = '#fsImage'+curHolder;
+          if (settings.transition == 'fade') {
+            fade(div);
+          }else if(settings.transition.indexOf('slide') != 1){ // If the transition is a slide
+            // Get the direction (put into params[1])
+            var params = settings.transition.split(' ');
+            if(params[1]){
+              slide(div, params[1]);
+            }else{
+              console.log('You didn\'t specify a direction for your slide.');
+            }
+          };
       });
     }
 	}
 
+/******
+  *
+  * Animation functions
+  *
+******/
+
+/////
+// Function for simple fade (default transition)
+// @param div object
+/////
+function fade(div){
+  $(div).fadeOut((settings.transitionSpeed*1000), function(){
+    postAnimation();
+  });
+}
+
+
+//////
+// Function for sliding
+// @param div object
+// @param slideDirection, top, bottom, left, right
+/////
+function slide(div, slideDirection){
+  var args = { opacity: '0' };
+  args[slideDirection] = '-=100%';
+  $(div).animate(args, 1000, function(){
+    $(div).css(slideDirection, '0');
+    postAnimation();
+  });
+}
+
+
+//////
+// Function for post animation stuff (i.e., resetting the divs back to their normal state)
+//////
+function postAnimation(){
+  curSlide++;
+  if (curHolder==1) newHolder=2; else newHolder=1;
+
+  //Move the other image to the front.
+  $('#fsImage'+newHolder).css('z-index', '-1');
+  
+  //Move the faded out image behind the other image and start loading the new image in there.
+  if (curSlide >= settings.images.length) curSlide=0;
+  $('#fsImage'+curHolder).css('z-index', '-2').css('background-image', 'url('+settings.images[curSlide]+')').css('opacity', '1').css('display', 'block');
+  curHolder = newHolder;
+  setTimeout(changePic, (settings.speed * 1000));
+}
 
 }( jQuery ));
