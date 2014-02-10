@@ -41,6 +41,7 @@ var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.c
 
 ## Options
 jQueryFullscreenCycler has five optional parameters that can be passed to the plugin.
+Example:
 ```js
 $('#fsCycler').fullscreenSlider({
   images: i,
@@ -52,10 +53,39 @@ $('#fsCycler').fullscreenSlider({
 });
 ```
 
-**`speed:`** _(default: 6)_ The time (in seconds) spent displaying each image (you can use decimals to get more exact times on the cycles)  
-**`maxCycles:`** _(default is infinite)_ Max number of cycles before going back to the first image  
-**`transitionSpeed:`** _(default: 2)_ The time (in seconds) spent fading between images    
-**`backgroundColor:`** _(default: transparent)_ The background color that will be shown before the first image is shown  
+#####**speed**  
+The time (in seconds) spent displaying each image (you can use decimals to get more exact times on the cycles).
+```js
+default: '6'
+options: integer
+```
+
+#####**maxCycles** 
+Max number of cycles before going back to the first image  
+```js
+default: 'infinite cycles'
+options: integer
+```
+
+#####**transitionSpeed**
+The time (in seconds) spent fading between images
+```js
+default: 6
+options: integer
+```
+
+#####**backgroundColor**  
+The background color that will be shown before the first image is shown  
+```js
+default: transparent
+options: CSS background color
+```
+#####**transition**
+Transition type
+```js
+default: fade
+options: transition type
+```
 
 ####Transitions
 Currently, there are only two transitions, `slide` and `fade`.   
@@ -69,3 +99,4 @@ There are no extra parameters for `fade`.
 ```js
 transition: "slide right"
 ```
+`slide` accepts top, bottom, right, and left as directions.
