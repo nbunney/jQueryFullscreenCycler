@@ -63,7 +63,7 @@ options: integer
 #####**maxCycles** 
 Max number of cycles before going back to the first image  
 ```js
-default: 'infinite cycles'
+default: '0' // Infinite cycles
 options: integer
 ```
 
