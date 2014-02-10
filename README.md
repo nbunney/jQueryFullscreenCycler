@@ -1,6 +1,6 @@
 # jQueryFullscreenCycler
 
-jQuery Fullscreen Cycler is a super lightweight jQuery plugin for creating fullscreen image cyclers.  The plugin is chainable with other jQuery commands and is careful to make sure that images are loaded before they are shown.
+jQueryFullscreenCycler is a super lightweight jQuery plugin for creating fullscreen image cyclers. The plugin is chainable with other jQuery commands and is careful to make sure that images are loaded before they are shown.
 
 ## Features
 * Lightweight. Only 4K minified.
@@ -11,27 +11,27 @@ jQuery Fullscreen Cycler is a super lightweight jQuery plugin for creating fulls
 
 ## Usage
 1. Add a div to your design.  We suggest adding this just under the body tag of your page.
-```
+```html
 <div id="fsCycler"></div>
 ```
 
 2. Include jQuery.
-```
+```html
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 ```
 
-3. Include jQuery Fullscreen Cycler.
-```
+3. Include jQueryFullscreenCycler.
+```html
 <script type="text/javascript" src="../src/jquery.fullscreenCycler.js"></script>
 ```
 
 4. Create an array for the images you want to show.
-```
+```js
 var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.com/1440/900/nature/2","http://lorempixel.com/1440/900/nature/3","http://lorempixel.com/1440/900/nature/4");
 ```
 
-5. Call jQuery Fullscreen Cycler for the div you added passing in the image array.
-```
+5. Call jQueryFullscreenCycler for the div you added passing in the image array.
+```html
 <script language="javascript" type="text/javascript">
   (function($) {
     $('#fsCycler').fullscreenSlider({images: i});
@@ -40,21 +40,32 @@ var i = new Array("http://lorempixel.com/1440/900/nature/1","http://lorempixel.c
 ```
 
 ## Options
-jQuery Fullscreen Cycler has three optional parameters that can be passed to the plugin.
-```
+jQueryFullscreenCycler has five optional parameters that can be passed to the plugin.
+```js
 $('#fsCycler').fullscreenSlider({
   images: i,
   speed: 6.5, 
   maxCycles: 4,
+  transition: "slide right"
   transitionSpeed: 2, 
   backgroundColor: "transparent"
 });
 ```
 
-*`speed:`* The time (in seconds) spent displaying each image (default is 6, but you can use decimals to get more exact times on the cycles)  
-*`maxCycles:`* (optional) Max number of cycles before going back to the first image (default is none)  
-*`transistionSpeed:`* The time (in seconds) spent fading between images (default: 2)  
-*`backgroundColor:`* The background color that will be shown before the first image is shown  
+**`speed:`** _(default: 6)_ The time (in seconds) spent displaying each image (you can use decimals to get more exact times on the cycles)  
+**`maxCycles:`** _(default is infinite)_ Max number of cycles before going back to the first image  
+**`transitionSpeed:`** _(default: 2)_ The time (in seconds) spent fading between images    
+**`backgroundColor:`** _(default: transparent)_ The background color that will be shown before the first image is shown  
 
-## Feature Requests
-* More transitions.  Currently the transition is a fade, but it would be trivial to add in other transitions, however this would certainly increase the size of the project so we would need to consider each addition carefully.
+####Transitions
+Currently, there are only two transitions, `slide` and `fade`.   
+`fade` can be called like this:
+```js
+transition: "fade"
+```
+There are no extra parameters for `fade`.
+
+`slide` has one required parameter. You must specify a direction. Example:
+```js
+transition: "slide right"
+```
