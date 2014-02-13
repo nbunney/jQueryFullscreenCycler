@@ -3,7 +3,7 @@
 jQueryFullscreenCycler is a super lightweight jQuery plugin for creating fullscreen image cyclers. The plugin is chainable with other jQuery commands and is careful to make sure that images are loaded before they are shown.
 
 ## Features
-* Lightweight. Only 4K minified.
+* Lightweight. Under 3K minified.
 * Responsive.  Uses CSS3 to make sure that the images correctly cover the screen no matter what the size or orientation.
 * Careful.  Verifies that images are loaded before fading them in.  We assume that you will be using large images for page backgrounds so we are careful to only cycle to an image if we can be sure that it is loaded fully so that visitors with slower connections will not see a series of partly loaded images the first trip through.
 * SEO and Memory footprint aware.  The plugin does not load the images until after the DOM is loaded allowing Google and Bing to see a fast page load time.  To keep the memory footprint small we only have two images loaded in the DOM at any time.  The others should be cached in the browser so that they load rapidly when requested again.
